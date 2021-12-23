@@ -10,8 +10,8 @@ public:
 	c_Calc();
 	c_Calc(T val1, V val2);
 	
-	void plus(T val1, V val2);
-	void minus(T val1, V val2);
+	T plus();
+	T minus();
 
 	void save();
 	void load();
@@ -32,15 +32,15 @@ inline c_Calc<T, V>::c_Calc(T val1, V val2)
 }
 
 template<typename T, typename V>
-inline void c_Calc<T, V>::plus(T val1, V val2)
+inline T c_Calc<T, V>::plus()
 {
-	std::cout << val1 + val2;
+	return (this->val1 + this->val2);
 }
 
 template<typename T, typename V>
-inline void c_Calc<T, V>::minus(T val1, V val2)
+inline T c_Calc<T, V>::minus()
 {
-	std::cout << val1 - val2;
+	return (this->val1 - this->val2);
 }
 
 template<typename T, typename V>
